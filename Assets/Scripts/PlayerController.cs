@@ -19,6 +19,7 @@ public class PlayerController : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         Debug.Log("Landed!");
+        AudioManager.Instance.PlayJump();
         rb.linearVelocity = new Vector2(
             rb.linearVelocity.x,
             jumpForce
